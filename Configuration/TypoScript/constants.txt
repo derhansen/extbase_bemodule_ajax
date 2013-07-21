@@ -1,0 +1,14 @@
+module.tx_extbasebemoduleajax {
+	view {
+		# cat=module.tx_extbasebemoduleajax/file; type=string; label=Path to template root (BE)
+		templateRootPath = EXT:extbase_bemodule_ajax/Resources/Private/Templates/
+		# cat=module.tx_extbasebemoduleajax/file; type=string; label=Path to template partials (BE)
+		partialRootPath = EXT:extbase_bemodule_ajax/Resources/Private/Partials/
+		# cat=module.tx_extbasebemoduleajax/file; type=string; label=Path to template layouts (BE)
+		layoutRootPath = EXT:extbase_bemodule_ajax/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=module.tx_extbasebemoduleajax//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

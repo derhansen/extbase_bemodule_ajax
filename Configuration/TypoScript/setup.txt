@@ -1,0 +1,11 @@
+# Module configuration
+module.tx_extbasebemoduleajax {
+	persistence {
+		storagePid = {$module.tx_extbasebemoduleajax.persistence.storagePid}
+	}
+	view {
+		templateRootPath = {$module.tx_extbasebemoduleajax.view.templateRootPath}
+		partialRootPath = {$module.tx_extbasebemoduleajax.view.partialRootPath}
+		layoutRootPath = {$module.tx_extbasebemoduleajax.view.layoutRootPath}
+	}
+}

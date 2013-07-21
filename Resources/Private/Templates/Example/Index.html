@@ -1,0 +1,67 @@
+<f:layout name="Default" />
+
+<f:section name="content">
+    <script>
+        $(document).ready(function () {
+
+            $(function() {
+                $( "#progressbar" ).progressbar({
+                    max: 100
+                });
+            });
+
+            function getStatus() {
+                $.ajax({
+                    url: '<f:uri.action action="checkLongProcess" />',
+                    type: 'get',
+                    dataType: 'json',
+                    cache: false,
+                    async: true,
+                    success: function (data) {
+                        console.log(data);
+                        var percentage = parseInt(data);
+
+                        $("#progressbar").progressbar({
+                            value: percentage
+                        });
+
+                        if (percentage < 100) {
+                            // Recheck status until completed
+                            getStatus();
+                        } else {
+                            $("#start").button({ disabled: false });
+                        }
+                    }
+                });
+            }
+
+            $("#start").button();
+            $("#start").click(function (event) {
+                console.log("Started");
+                $("#start").button({ disabled: true });
+                $( "#progressbar" ).progressbar();
+                $.ajax({
+                    url: '<f:uri.action action="startLongProcess" />',
+                    type: 'get',
+                    dataType: 'json',
+                    cache: false,
+                    async: true,
+                    success: function (data) {
+                        console.log("Finished");
+                        console.log("startLongProcess returned:" + data);
+                    }
+                });
+                getStatus();
+            });
+        });
+    </script>
+
+    <h2><f:translate key="mod1_index_title" /></h2>
+    <p><f:translate key="mod1_index_description1" /></p>
+    <p><f:translate key="mod1_index_description2" /></p>
+
+    <div id="progressbar"></div>
+
+    <a href="#" id="start"><f:translate key="mod1_index_start" /></a>
+
+</f:section>

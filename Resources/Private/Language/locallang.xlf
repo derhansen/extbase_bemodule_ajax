@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-07-20T13:17:51Z" product-name="extbase_bemodule_ajax">
+		<header/>
+		<body>
+            <trans-unit id="mod1_index_title">
+                <source>Example Module</source>
+            </trans-unit>
+            <trans-unit id="mod1_index_description1">
+                <source>This Module demonstrates how to use AJAX in an ExtBase Backend Module</source>
+            </trans-unit>
+            <trans-unit id="mod1_index_description2">
+                <source>The JQuery UI Progressbar below will process 20 seconds when the start button is clicked</source>
+            </trans-unit>
+            <trans-unit id="mod1_index_start">
+                <source>Click to start</source>
+            </trans-unit>
+        </body>
+	</file>
+</xliff>

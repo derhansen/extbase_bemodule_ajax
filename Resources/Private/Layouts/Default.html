@@ -1,0 +1,32 @@
+{namespace h=derhansen\ExtbaseBemoduleAjax\ViewHelpers\Be}
+
+<h:IncludeJQuery jquery="1" jqueryui="1" />
+
+<f:be.container loadExtJs="0" loadPrototype="0" loadScriptaculous="0">
+    <div class="typo3-fullDoc">
+        <div id="typo3-docheader">
+            <div id="typo3-docheader-row1">
+                <div class="buttonsleft"></div>
+                <div class="buttonsright">
+                    <f:be.buttons.shortcut />
+                </div>
+            </div>
+            <div id="typo3-docheader-row2">
+                <div class="docheader-row2-left">
+                </div>
+                <div class="docheader-row2-right">
+                    <f:be.pagePath />
+                    <f:be.pageInfo />
+                </div>
+            </div>
+        </div>
+        <div id="typo3-docbody">
+            <div id="typo3-inner-docbody">
+                <f:flashMessages class="tx-extbase-flash-message" />
+                <div id="content">
+                    <f:render section="content" />
+                </div>
+            </div>
+        </div>
+    </div>
+</f:be.container>
