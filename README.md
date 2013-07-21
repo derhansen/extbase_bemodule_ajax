@@ -5,6 +5,8 @@ TYPO3 Extbase backend module with progressbar
 
 This is a demo TYPO3 extension refered in my blog article regarding Extbase backend modules and AJAX.
 
+Article: http://www.derhansen.de/2013/07/typo3-extbase-backend-module-with.html
+
 ## What does it do?
 
 This TYPO3 extension does the following
